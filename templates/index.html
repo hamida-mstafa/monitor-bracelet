@@ -1,0 +1,29 @@
+{% load static %}
+<html>
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Monitor</title>
+        {% block styles %}
+        <link rel="stylesheet" href={% static 'css/bootstrap.min.css' %}>
+        {% endblock %}
+    
+    </head>
+    <body>
+
+        {% block content %}
+        <div class="container">
+            <h1>Monitor Band</h1>
+            <div id="temp" class="row">
+                <p>Temperature: <span id="tempValue"></span></p>
+                <p>Time: <span id="timeStamp"></span></p>
+            </div>
+        </div>
+        {% endblock %}
+        
+        {% block script %}
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <script src="{% static 'js/script.js' %}"></script>
+        {% endblock %}
+    </body>
+</html>
