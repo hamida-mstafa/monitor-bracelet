@@ -22,7 +22,11 @@ export class AppComponent implements OnInit {
       'path': '/'
     },
     {
-      'title': 'My Account (Part 2)',
+      'title': 'Highest Temperature',
+      'path': '/auth'
+    },
+    {
+      'title': 'Lowest Temperature',
       'path': '/auth'
     }
   ];
