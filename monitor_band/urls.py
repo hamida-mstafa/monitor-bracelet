@@ -17,13 +17,15 @@ from django.contrib import admin
 from django.conf.urls import url, include
 from django.conf.urls.static import static
 from monitor_band import settings
-from monitor_band.views import index,get_values,get_latest_temp
+from monitor_band.views import index,get_values,get_latest_temp,TempValues
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$',index,name="home"),
-    url(r"^post_temp$",get_values,name="post_temp"),
-    url(r"^get_latest_temp$",get_latest_temp,name="get_latest_temp")
+    url(r"^api/post_temp$",get_values,name="post_temp"),
+    url(r"^get_latest_temp$",get_latest_temp,name="get_latest_temp"),
+    # url(r'^api/tempValues',TempValues.as_view()),
+    # url(r'^api/merch/$', views.TempValues.as_view())
 
 ]
 if settings.DEBUG:
